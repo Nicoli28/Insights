@@ -1,0 +1,271 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #c4c4c4; /* Cinza claro */
+    color: #333;
+    margin: 0;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    color:#010101;
+    font-size: 25px;
+}
+
+.container {
+    display: flex; /* Layout com Flexbox */
+    min-height: 100vh; /* Define a altura mínima da página */
+}
+
+/*Menu lateral*/
+.sidebar {
+    background-color: #BED7EF;
+    color: white; /*Cor do texto*/
+    width: 250px; /* Largura do menu lateral */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    height: 100vh;
+}
+
+.sidebar .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px; /* Espaçamento entre o logo e as abas */
+}
+
+/*Logo*/
+.sidebar .header img {
+    width: 200px; /* Tamanho do logo */
+    margin: 0px;
+    margin-right: 50px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+}
+
+.sidebar li {
+    margin-bottom: 25px; /* Espaçamento entre as abas */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    display: block; /* Faz a âncora ocupar toda a largura do menu */
+    padding: 12px 20px;
+    border-radius: 5px; /* Arredonda os cantos das abas */
+    transition: background-color 0.3s ease; /* Adiciona transição para o hover */
+}
+
+.sidebar a:hover {
+    background-color: #fcfcfc80; /* Cor de destaque ao passar o mouse */
+}
+
+/*Imagem do robo no menu*/
+.robo-image {
+    width: 100px; /* Ajuste a largura da imagem conforme necessário */
+    margin-top: 120px; /* Espaçamento entre as abas e a imagem */
+}
+
+/*Conteúdo*/
+.main {
+    display: flex; /* Habilita o Flexbox */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    padding: 30px;
+    background-color: #fff; /* Cor de fundo do conteúdo */
+    min-height: 100vh; /* Define altura mínima */
+}
+
+/* Aba: Chat Livre */
+.chat-area {
+    height: calc(80vh - 130px); /* Ajuste a altura conforme necessário */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/*mensagens do chat*/
+.chat-messages {
+    flex: 1; 
+    overflow-y: auto;
+}
+
+/*caixa de texto: digite aqui...*/
+.chat-input-area {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os botões */
+    margin-right: 10px;
+    align-items: center; /* Alinha os botões verticalmente */
+    margin-top: 10px; /* Espaçamento entre as mensagens e a caixa de texto */
+}
+
+.chat-input-area button.send-button {
+    padding: 10px 15px;
+    background-color: #007bffc8; /* Remove a cor de fundo do botão */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    /* ... outros estilos para o botão ... */
+}
+
+.chat-input-area button.send-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.chat-livre{
+    border: none;
+}
+
+/*caixa de texto*/
+.chat-input-area input {
+    width: calc(100% - 120px); /* Calcula a largura da caixa de texto */
+    padding: 15px;
+    border: 1px solid #010101;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.chat-input button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+}
+
+.chat-input button:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+/* Upload */
+.upload-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.upload-area input[type="file"] {
+    display: none;
+}
+
+.upload-area label {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+}
+
+.upload-area label:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+.upload-area button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+}
+
+.upload-area button:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+/* Resultados */
+.analise-results {
+    margin-bottom: 20px;
+}
+
+.analise-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.analise-results li {
+    margin-bottom: 5px;
+}
+
+/*Botão Gerar Proposta */
+#gerar-proposta {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+}
+
+#gerar-proposta:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+/* Download */
+.download-area {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+/* Formulário de Contato */
+#contato-form {
+    margin-bottom: 20px;
+}
+
+#contato-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contato-form input,
+#contato-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#contato-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+}
+
+#contato-form button:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em colunas */
+    display: none;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    background-color: #fff; /* Cor de fundo do conteúdo */
+    flex: 1; /* Ocupa o espaço restante */
+}
