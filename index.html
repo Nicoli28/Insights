@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Licita.AI</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="sidebar">
-            <div class="header"> 
-                <img src="Logo completa.png" alt="Logo Licita.AI"> 
+            <div class="header">
+                <img src="Logo completa.png" alt="Logo Licita.AI">
             </div>
             <ul>
                 <li><a href="#chat-livre" id="chat-link">Chat Livre</a></li>
@@ -22,84 +24,87 @@
             </ul>
             <img src="robo braços cruzados.png" alt="Robô Licita.AI" class="robo-image">
         </div>
-            <div class="main">
-                <div id="chat-livre" class="content">
-                    <h2>Chat Livre</h2>
-                    <div class="chat-area"> 
-                         <div class="chat-messages"><!-- Mensagens do chat--></div>
-                    </div>
+        <div class="main">
+            <div id="chat-livre" class="content">
+                <h2>Chat Livre</h2>
+                <div class="chat-area">
+                    <div class="chat-messages"><!-- Mensagens do chat--></div>
                     <div class="chat-input-area">
                         <input type="text" placeholder="Digite sua mensagem...">
                         <button class="send-button">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
                         </button>
                     </div>
                 </div>
-                <div class="upload-area"> 
-                    <input type="file" id="upload-input" accept=".pdf,.zip">
-                    <label for="upload-input">Carregar Edital</label>
+                <div class="upload-area">
+                    <input type="file" id="upload-input-chat" accept=".pdf,.zip">
+                    <label for="upload-input-chat">Carregar Edital</label>
                 </div>
                 <div class="resumo-edital"><!-- Aqui será exibido o resumo do edital --></div>
-                <div id="analise-inteligente" class="content">
-                    <h2>Análise Inteligente</h2>
-                    <div class="chat-area">
-                        <div class="chat-messages"><!-- Mensagens do chat --></div>
-                        <div class="chat-input-area">
-                            <input type="text" placeholder="Digite sua mensagem...">
-                            <button class="send-button">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="upload-area">
-                        <input type="file" id="upload-input" accept=".pdf,.zip">
-                        <label for="upload-input">Carregar Edital</label>
+            </div>
+            <div id="analise-inteligente" class="content">
+                <h2>Análise Inteligente</h2> 
+                <div class="chat-area">
+                    <div class="chat-messages"><!-- Mensagens do chat --></div>
+                    <div class="chat-input-area">
+                        <input type="text" placeholder="Digite sua mensagem...">
+                        <button class="send-button">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                <div class="analise-results">
-                    <div class="chat-container"><!-- Seção de chat para dúvidas --></div>
-                </div>
-                <div id="proposta-eficiente" class="content">
-                    <h2>Proposta Eficiente</h2>
-                    <div class="content-area"> 
-                        <div class="upload-area">
-                            <input type="file" id="upload-input" accept=".pdf,.zip">
-                            <label for="upload-input">Carregar Edital</label>
-                            <button id="upload-button">Enviar</button>
-                        </div>
-                        <button id="gerar-proposta">Gerar Proposta</button>
-                        <div class="download-area">
-                        <!-- Área para exibir o link de download da proposta -->
-                        </div>
-                    </div>
-                </div>
-                <div id="insights-estrategicos" class="content">
-                    <h2>Insights Estratégicos</h2>
-                    <div id="powerbi-dashboard">
-                    <!-- Área para o dashboard do Power BI -->
-                    </div>
-                </div>
-                <div id="suporte" class="content">
-                    <h2>Suporte</h2>
-                    <form id="contato-form">
-                        <label for="nome">Nome:</label>]
-                        <input type="text" id="nome" required>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" required>
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" required></textarea>
-                        <button type="submit">Enviar</button>
-                    </form>
-                </div>
-                <div id="sobre" class="content">
-                    <h2>Sobre</h2>
-                    <p> Informações sobre a ferramenta, funcionalidades, equipe, etc.</p>
+                <div class="upload-area">
+                    <input type="file" id="upload-input-analise" accept=".pdf,.zip">
+                    <label for="upload-input-analise">Carregar Edital</label>
                 </div>
             </div>
-            <script src="java.js"></script>
-    </body>
+            <div class="analise-results">
+                <div class="chat-container"><!-- Seção de chat para dúvidas --></div>
+            </div>
+            <div id="proposta-eficiente" class="content">
+                <h2>Proposta Eficiente</h2> 
+                <div class="content-area">
+                    <div class="upload-area">
+                        <input type="file" id="upload-input-proposta" accept=".pdf,.zip">
+                        <label for="upload-input-proposta">Carregar Edital</label>
+                        <button id="upload-button-proposta">Enviar</button>
+                    </div>
+                    <button id="gerar-proposta">Gerar Proposta</button>
+                    <div class="download-area">
+                        <!-- Área para exibir o link de download da proposta -->
+                    </div>
+                </div>
+            </div>
+            <div id="insights-estrategicos" class="content">
+                <h2>Insights Estratégicos</h2> 
+                <div id="powerbi-dashboard">
+                    <!-- Área para o dashboard do Power BI -->
+                </div>
+            </div>
+            <div id="suporte" class="content">
+                <h2>Suporte</h2> 
+                <form id="contato-form">
+                    <label for="nome">Nome:</label>]
+                    <input type="text" id="nome" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div id="sobre" class="content">
+                <h2>Sobre</h2> 
+                <p> Informações sobre a ferramenta, funcionalidades, equipe, etc.</p>
+            </div>
+        </div>
+        <script src="java.js"></script>
+</body>
+
 </html>

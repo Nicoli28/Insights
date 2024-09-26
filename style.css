@@ -1,6 +1,7 @@
+/* Estilos gerais */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #c4c4c4; /* Cinza claro */
+    background-color: #c4c4c4; 
     color: #333;
     margin: 0;
 }
@@ -12,32 +13,34 @@ h1{
 }
 
 .container {
-    display: flex; /* Layout com Flexbox */
-    min-height: 100vh; /* Define a altura mínima da página */
+    display: flex; 
+    min-height: 100vh; 
 }
 
-/*Menu lateral*/
+/* Menu Lateral */
 .sidebar {
     background-color: #BED7EF;
-    color: white; /*Cor do texto*/
-    width: 250px; /* Largura do menu lateral */
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
-    height: 100vh;
+    color: white; 
+    width: 200px; 
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+    /* min-height: 100vh; */  /* Remova essa linha */
+    min-height: 100vh;
 }
 
 .sidebar .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px; /* Espaçamento entre o logo e as abas */
+    margin-bottom: 30px; 
 }
 
-/*Logo*/
+/* Logo */
 .sidebar .header img {
-    width: 200px; /* Tamanho do logo */
+    width: 200px; 
     margin: 0px;
     margin-right: 50px;
+    margin-left: 20px;
 }
 
 .sidebar ul {
@@ -47,71 +50,75 @@ h1{
 }
 
 .sidebar li {
-    margin-bottom: 25px; /* Espaçamento entre as abas */
+    margin-bottom: 15px; 
 }
 
 .sidebar a {
     text-decoration: none;
     color: white;
-    display: block; /* Faz a âncora ocupar toda a largura do menu */
+    display: block; 
     padding: 12px 20px;
-    border-radius: 5px; /* Arredonda os cantos das abas */
-    transition: background-color 0.3s ease; /* Adiciona transição para o hover */
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
 }
 
 .sidebar a:hover {
-    background-color: #fcfcfc80; /* Cor de destaque ao passar o mouse */
+    background-color: #fcfcfc80; 
 }
 
-/*Imagem do robo no menu*/
+/* Imagem do robô no menu */
 .robo-image {
-    width: 100px; /* Ajuste a largura da imagem conforme necessário */
-    margin-top: 120px; /* Espaçamento entre as abas e a imagem */
+    width: 80px; 
+    margin-top: 10px; 
 }
 
-/*Conteúdo*/
+/* Conteúdo Principal */
 .main {
-    display: flex; /* Habilita o Flexbox */
-    flex-direction: column; /* Organiza o conteúdo verticalmente */
-    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    display: flex; 
+    flex-direction: column; 
+    flex: 1; 
     padding: 30px;
-    background-color: #fff; /* Cor de fundo do conteúdo */
-    min-height: 100vh; /* Define altura mínima */
+    background-color: #fff; 
+    height: 100vh; 
+    min-height: 100vh;
 }
 
 /* Aba: Chat Livre */
 .chat-area {
-    height: calc(80vh - 130px); /* Ajuste a altura conforme necessário */
+    height: calc(100vh - 180px); 
     display: flex;
     flex-direction: column;
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
     background-color: #fff;
+    margin-top: 20px; 
+    margin-bottom: 10px; 
 }
 
-/*mensagens do chat*/
+/* Mensagens do chat */
 .chat-messages {
     flex: 1; 
     overflow-y: auto;
 }
 
-/*caixa de texto: digite aqui...*/
+/* Caixa de texto: digite aqui... */
 .chat-input-area {
     display: flex;
-    justify-content: space-between; /* Espaçamento entre os botões */
+    justify-content: space-between; 
     margin-right: 10px;
-    align-items: center; /* Alinha os botões verticalmente */
-    margin-top: 10px; /* Espaçamento entre as mensagens e a caixa de texto */
+    align-items: center; 
+    margin-top: 10px; 
 }
 
 .chat-input-area button.send-button {
     padding: 10px 15px;
-    background-color: #007bffc8; /* Remove a cor de fundo do botão */
+    background-color: #007bffc8; 
     border-radius: 5px;
     border: none;
     cursor: pointer;
     /* ... outros estilos para o botão ... */
+    align-self: flex-end;
 }
 
 .chat-input-area button.send-button svg {
@@ -123,54 +130,57 @@ h1{
     border: none;
 }
 
-/*caixa de texto*/
+/* Caixa de texto */
 .chat-input-area input {
-    width: calc(100% - 120px); /* Calcula a largura da caixa de texto */
-    padding: 15px;
+    width: calc(100% - 120px); 
+    padding: 15px; 
     border: 1px solid #010101;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-top: 0;
 }
+
 .chat-input button {
     padding: 8px 15px;
-    background-color: #007bff;
+    background-color: #f3f3f38c;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
 }
 
 .chat-input button:hover {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); 
 }
 
 /* Upload */
 .upload-area {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start; 
 }
 
 .upload-area input[type="file"] {
     display: none;
 }
 
+/* Botão Carregar edital */
 .upload-area label {
     padding: 8px 15px;
-    background-color: #007bff;
-    color: white;
+    background-color: #6200ff;
+    color: white; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
 }
 
 .upload-area label:hover {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .upload-area button {
@@ -180,12 +190,12 @@ h1{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
 }
 
 .upload-area button:hover {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); 
 }
 
 /* Resultados */
@@ -202,7 +212,7 @@ h1{
     margin-bottom: 5px;
 }
 
-/*Botão Gerar Proposta */
+/* Botão Gerar Proposta */
 #gerar-proposta {
     padding: 10px 20px;
     background-color: #007bff;
@@ -211,12 +221,12 @@ h1{
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
 }
 
 #gerar-proposta:hover {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); 
 }
 
 /* Download */
@@ -251,21 +261,75 @@ h1{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: box-shadow 0.3s ease; /* Transição para a sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease; 
 }
 
 #contato-form button:hover {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .content {
     display: flex;
-    flex-direction: column; /* Organiza os elementos em colunas */
+    flex-direction: column; 
     display: none;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 30px;
-    background-color: #fff; /* Cor de fundo do conteúdo */
-    flex: 1; /* Ocupa o espaço restante */
+    background-color: #fff; 
+    flex: 1; 
+    align-items: flex-start; 
+}
+
+.content h2{
+    font-size: 20px;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) { /* Para tablets e telas menores */
+    .sidebar {
+        width: 100%; 
+        position: fixed; 
+        top: 0; 
+        height: 100vh; 
+        z-index: 10; 
+    }
+
+    .main {
+        margin-left: 250px; 
+        padding-left: 20px; 
+    }
+
+    .chat-area {
+        height: calc(100vh - 180px); 
+    }
+}
+
+/* Ajustes de Espaçamento */
+.chat-area {
+    margin-top: 20px; 
+    margin-bottom: 10px;
+}
+
+.chat-input-area {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Reposicionamento do Botão "Carregar Edital" */
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+/* Botão de Seta Redondado e dentro da caixa de texto */
+.chat-input-area button.send-button {
+    border-radius: 50%; 
+    padding: 10px; 
+    margin-left: 10px;
 }
