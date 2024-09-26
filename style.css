@@ -12,11 +12,6 @@ h1{
     font-size: 25px;
 }
 
-.container {
-    display: flex; 
-    min-height: 100vh; 
-}
-
 /* Menu Lateral */
 .sidebar {
     background-color: #BED7EF;
@@ -88,7 +83,7 @@ h1{
     height: calc(100vh - 180px); 
     display: flex;
     flex-direction: column;
-    border: 1px solid #ddd;
+    border: 1px solid #b4b4b4;
     padding: 10px;
     border-radius: 5px;
     background-color: #fff;
@@ -108,81 +103,80 @@ h1{
     justify-content: space-between; 
     margin-right: 10px;
     align-items: center; 
-    margin-top: 10px; 
+    margin-top: 10px;
+    width: 100%;
+    position: relative; /* Adiciona position: relative para o container */
 }
 
+/* Botão de Enviar Redondo */
 .chat-input-area button.send-button {
-    padding: 10px 15px;
+    padding: 10px 12px;
     background-color: #007bffc8; 
-    border-radius: 5px;
+    border-radius: 50%;
     border: none;
     cursor: pointer;
-    /* ... outros estilos para o botão ... */
-    align-self: flex-end;
+    margin-left: 10px; 
 }
 
-.chat-input-area button.send-button svg {
-    width: 20px;
-    height: 20px;
-}
-
-.chat-livre{
-    border: none;
-}
-
-/* Caixa de texto */
+/* Caixa de texto*/
 .chat-input-area input {
-    width: calc(100% - 120px); 
+    width: calc(100% - 60px); 
     padding: 15px; 
-    border: 1px solid #010101;
+    border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 5px;
     margin-top: 0;
 }
 
-.chat-input button {
-    padding: 8px 15px;
-    background-color: #f3f3f38c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
-    transition: box-shadow 0.3s ease; 
-}
-
-.chat-input button:hover {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); 
+/*tamanho do svg (seta)*/
+.chat-input-area button.send-button svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* Upload */
 .upload-area {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
 
+.analise-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.analise-results li {
+    margin-bottom: 5px;
+}
+
+/*esconde o botão padrão de escolher arquivo*/
 .upload-area input[type="file"] {
     display: none;
 }
 
-/* Botão Carregar edital */
+/* Botão Carregar edital todos */
 .upload-area label {
     padding: 8px 15px;
-    background-color: #6200ff;
+    background-color: #007bff;
     color: white; 
+    font-size: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 10px;
+    margin-bottom: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
     transition: box-shadow 0.3s ease; 
 }
 
+/*Sombra do botão Carregar edital*/
 .upload-area label:hover {
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); 
 }
 
+/*Botão Enviar aba proposta eficiente*/
 .upload-area button {
     padding: 8px 15px;
     background-color: #007bff;
@@ -194,6 +188,7 @@ h1{
     transition: box-shadow 0.3s ease; 
 }
 
+/*Sombra do botão enviar aba proposta eficiente*/
 .upload-area button:hover {
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); 
 }
@@ -201,15 +196,6 @@ h1{
 /* Resultados */
 .analise-results {
     margin-bottom: 20px;
-}
-
-.analise-results ul {
-    list-style: none;
-    padding: 0;
-}
-
-.analise-results li {
-    margin-bottom: 5px;
 }
 
 /* Botão Gerar Proposta */
@@ -225,6 +211,7 @@ h1{
     transition: box-shadow 0.3s ease; 
 }
 
+/*Sombra do botão Gerar Proposta na aba 3*/
 #gerar-proposta:hover {
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); 
 }
@@ -236,10 +223,6 @@ h1{
 }
 
 /* Formulário de Contato */
-#contato-form {
-    margin-bottom: 20px;
-}
-
 #contato-form label {
     display: block;
     margin-bottom: 5px;
@@ -254,6 +237,7 @@ h1{
     margin-bottom: 10px;
 }
 
+/*Botão Enviar da aba suporte*/
 #contato-form button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -265,31 +249,20 @@ h1{
     transition: box-shadow 0.3s ease; 
 }
 
+/*Sobra do botão enviar da aba suporte*/
 #contato-form button:hover {
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); 
 }
 
-.content {
-    display: flex;
-    flex-direction: column; 
-    display: none;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 30px;
-    background-color: #fff; 
-    flex: 1; 
-    align-items: flex-start; 
-}
-
-.content h2{
-    font-size: 20px;
-    text-align: left;
-    margin-top: 0px;
-    margin-bottom: 20px;
+.container {
+    display: flex; 
+    min-height: 100vh; 
 }
 
 /* Responsividade */
 @media (max-width: 768px) { /* Para tablets e telas menores */
+    .container {
+        width: 768px;
     .sidebar {
         width: 100%; 
         position: fixed; 
@@ -297,6 +270,7 @@ h1{
         height: 100vh; 
         z-index: 10; 
     }
+}
 
     .main {
         margin-left: 250px; 
@@ -306,30 +280,16 @@ h1{
     .chat-area {
         height: calc(100vh - 180px); 
     }
+
+    .upload-area {
+        flex-direction: row; 
+    }
 }
 
-/* Ajustes de Espaçamento */
-.chat-area {
-    margin-top: 20px; 
+/*Título de todas as abas*/
+h2{
+    font-size:20px;
+    text-align: center;
+    margin-top: -10px;
     margin-bottom: 10px;
-}
-
-.chat-input-area {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Reposicionamento do Botão "Carregar Edital" */
-.upload-area {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-}
-
-/* Botão de Seta Redondado e dentro da caixa de texto */
-.chat-input-area button.send-button {
-    border-radius: 50%; 
-    padding: 10px; 
-    margin-left: 10px;
 }
